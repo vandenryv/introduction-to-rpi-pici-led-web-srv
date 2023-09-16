@@ -32,7 +32,7 @@ That's it. Thonny is ready to read and write your code to your rpi pico
 A necessary step to check that your installation works is to make the rpi pico say Hello World : We will do it 2 ways, the Dev way and the Maker way
 
 ### The Dev way :
-We will simply make the rpi pico execute a python commande to print "Hello World" to its serial output.
+We will simply make the rpi pico execute a python command to print "Hello World" to its serial output.
 
 *The serial output of the rpi is connected to the serial input of the virtual\* serial interface of your computer so we will see it*
 
@@ -59,7 +59,7 @@ To make a LED blink we need a few more step :
 - Repeat the last 3 commands
 
 Now to code the blinking you can use the untitled file in front of you :
-- First we need to import a few things from the micropython firware. To interact with pins we need the `Pin` object, you will find it in the machine package. And to wait a bit between the different states we will need to use the `sleep()` function from the time package
+- First we need to import a few things from the micropython firmware. To interact with pins we need the `Pin` object, you will find it in the `machine` package. And to wait a bit between the different states we will need to use the `sleep()` function from the `time` package
 
 ```
 from machine import Pin
@@ -107,7 +107,26 @@ while True:
 
 *If you forgot the second `sleep(1)` you might think that the LED never turns off, but it does, the next instruction is to turn it on and it is so fast that you will never have the time to see it turn off.*
 
+Now if you press Play, your LED should turn on and off each second. If you want it to go faster you can send decimal value to sleep or import and use sleep_ms for millisecond or sleep_us for micro second
 
+Good job, the Rpi now blink its LED
+
+### They grow so fast
+
+Last step of the "Hello World", we will make the rpi do the blinking without the pc sending it the script. 
+
+The micropython firmware allows you to save file to rpi, if you save a script with the name "main.py" it will automatically start it when powered on.
+
+From the screen with your script in the untitled file:
+- Press Stop to stop the process and reconnect the pi
+- Press the Save button
+- Choose "Raspberry Pi Pico"
+- Give "main.py" as name for the file
+- Press Ok
+
+Your script is now saved as main.py at the root of the filesystem of the pi. You can unplug it from your computer and plug it ANYWHERE and the script will run and the LED will start blinking.
+
+**HELLO WORLD of electronics and microcontrollers.**
 
 
 \* Yeah!! it is virtual, the rpi has full control of the way it speaks to your computer, remember just a bit ago it was seen as a USB drive ;) It can change itself to a USBDrive, a serial interface, a keyboard, a mouse, a gamepad, a camera, and just anything you want as long as you have the code for it.
