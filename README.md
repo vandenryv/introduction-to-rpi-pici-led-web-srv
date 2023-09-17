@@ -38,7 +38,9 @@ We will simply make the rpi pico execute a python command to print "Hello World"
 
 In your brand new configured Thonny click on the red STOP button, the STOP button stops the current operation and restart the connection. You should now have a Shell tab on the bottom side of Thonny in it write (or copy) after the `>>>`
 
-``print('Hello World') ``
+```python
+print('Hello World') 
+```
 
 and then press Enter, the Raspberry should answer with "Hello World".
 
@@ -61,25 +63,25 @@ To make a LED blink we need a few more step :
 Now to code the blinking you can use the untitled file in front of you :
 - First we need to import a few things from the micropython firmware. To interact with pins we need the `Pin` object, you will find it in the `machine` package. And to wait a bit between the different states we will need the `sleep()` function from the `time` package
 
-```
+```python
 from machine import Pin
 from time import sleep
 ``` 
 
 - Then we declare than we want control of the "LED" pin as an Output.
 
-```
+```python
 led = Pin("LED", Pin.OUT)
 ```
 
 - Now that we have our led object that control the led on the pi we can turn it on.
 
-```
+```python
 led.on()
 ```
 Now you should have something like this.
 
-```
+```python
 from machine import Pin
 from time import sleep
 led = Pin("LED", Pin.OUT)
@@ -94,7 +96,7 @@ __"But the LED doesn't blink it, just stays on"__ you might say. Yes now we can 
 
 In the loop we turn the LED on, wait 1 second, turn it off, and wait 1 more second.
 
-```
+```python
 from machine import Pin
 from time import sleep
 led = Pin("LED", Pin.OUT)
