@@ -18,7 +18,6 @@ elif BOARD_TYPE == Board.BoardType.ESP8266:
 else:
     led = Pin(2, Pin.OUT)
 
-
 async def main():
     while True:
         await asyncio.sleep(1)

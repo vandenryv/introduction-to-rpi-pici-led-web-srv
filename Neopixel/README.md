@@ -241,7 +241,7 @@ Now that you have the basics to do animations you can try yourself to do more cr
 
 Would it not be nice to be able to have very smooth colors. Well, we can use the chromatic disk, but for that we need ... MATHS !!!
 
-Don't worry I already did the maths, you can just use them. In Thonny go to the top menu, in "View", check "Files" if it is not already checked. Two tabs will display on the left, the top one represents the files in your computer and the bottom one the files in your rpi. In the computer file tab navigate to this repository folder, go to the common folder, right click on color and choose "upload to /".
+Don't worry I already did the maths, you can just use them. In Thonny go to the top menu, in "View", check "Files" if it is not already checked. Two tabs will display on the left, the top one represents the files in your computer and the bottom one the files in your rpi. In the computer file tab navigate to this repository folder, go to the common folder, right click on "color.py" and choose "upload to /".
 
 It will transfer the file to your rpi. Now we can use it in our main.py script.
 
