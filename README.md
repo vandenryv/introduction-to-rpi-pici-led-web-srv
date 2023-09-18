@@ -1,6 +1,6 @@
-# introduction-to-rpi-pici-led-web-srv
-Introduction to rpi pi pico Webserver controlling neopixel using GurgleWebServer
+# Introduction to electronic
 
+This repository contains step-by-step instruction for a workshop about introducing people to electronics using a Raspberry Pi Pico W with 12 Neopixels plug into its GPIO 28.
 
 # Instruction
 
@@ -19,7 +19,7 @@ Well done you just successfully flash a rpi pico with a micropython firmware.
 
 Thonny is a simple python IDE that integrate microPython and microcontroller interface.
 
-- Download the last version of Thonny for your os. Which you can find [here](https://thonny.org/).
+- Download the last version of Thonny for your os. Which you can find [HERE](https://thonny.org/).
 - Install it, instructions vary depending on your OS.
 - Launch it, go to Tools -> Options.
 - In the Interpreter tab under "Which kind of interpreter ..." choose "MicroPython (Paspberry Pi Pico)".
