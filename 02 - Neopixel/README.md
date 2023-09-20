@@ -22,7 +22,7 @@ from neopixel import NeoPixel
 Now we need to declare how much pixel we have and on wich pin
 
 ```python
-np = NeoPixel(Pin(28), 12)
+np = NeoPixel(Pin(28, Pin.OUT), 12)
 ```
 
 Now we can turn on the first LED in red, the second in green, and the third in yellow
@@ -46,7 +46,7 @@ from machine import Pin
 from time import sleep
 from neopixel import NeoPixel
 
-PIXEL_PIN = Pin(28)
+PIXEL_PIN = Pin(28, Pin.OUT)
 NB_PIXEL = 12
 
 np = NeoPixel(PIXEL_PIN, NB_PIXEL)
@@ -67,7 +67,7 @@ from machine import Pin
 from time import sleep
 from neopixel import NeoPixel
 
-PIXEL_PIN = Pin(28)
+PIXEL_PIN = Pin(28, Pin.OUT)
 NB_PIXEL = 12
 
 np = NeoPixel(PIXEL_PIN, NB_PIXEL)
@@ -114,7 +114,7 @@ from machine import Pin
 from time import sleep
 from neopixel import NeoPixel
 
-PIXEL_PIN = Pin(28)
+PIXEL_PIN = Pin(28, Pin.OUT)
 NB_PIXEL = 12
 PERIOD = 0.5
 np = NeoPixel(PIXEL_PIN, NB_PIXEL)
@@ -146,7 +146,7 @@ from machine import Pin
 from time import sleep
 from neopixel import NeoPixel
 
-PIXEL_PIN = Pin(28)
+PIXEL_PIN = Pin(28, Pin.OUT)
 NB_PIXEL = 12
 PERIOD = 0.5
 np = NeoPixel(PIXEL_PIN, NB_PIXEL)
@@ -174,7 +174,7 @@ from machine import Pin
 from time import sleep
 from neopixel import NeoPixel
 
-PIXEL_PIN = Pin(28)
+PIXEL_PIN = Pin(28, Pin.OUT)
 NB_PIXEL = 12
 PERIOD = 0.5
 np = NeoPixel(PIXEL_PIN, NB_PIXEL)
@@ -207,7 +207,7 @@ from machine import Pin
 from time import sleep
 from neopixel import NeoPixel
 
-PIXEL_PIN = Pin(28)
+PIXEL_PIN = Pin(28, Pin.OUT)
 NB_PIXEL = 12
 PERIOD = 0.5
 np = NeoPixel(PIXEL_PIN, NB_PIXEL)
@@ -258,7 +258,7 @@ from time import sleep
 from neopixel import NeoPixel
 from color import from_hsv
 
-PIXEL_PIN = Pin(28)
+PIXEL_PIN = Pin(28, Pin.OUT)
 NB_PIXEL = 12
 PERIOD = 0.001
 np = NeoPixel(PIXEL_PIN, NB_PIXEL)
@@ -268,7 +268,7 @@ tracker = 0
 while True:
     for angle in range(0,360):
         for i_led in range(0,NB_PIXEL):
-            # from_hsv return a Color use in the color library, Neopixels need a tuple, the method as_tuple() convert the Color as a tuple of RGB
+            # from_hsv return a Color object used in the color library, NeoPixel needs a tuple, the method as_tuple() convert the Color as a tuple of RGB
             np[i_led] = from_hsv(angle,1,0.2).as_tuple()
         np.write()
         sleep(PERIOD)
@@ -284,7 +284,7 @@ from time import sleep
 from neopixel import NeoPixel
 from color import from_hsv
 
-PIXEL_PIN = Pin(28)
+PIXEL_PIN = Pin(28, Pin.OUT)
 NB_PIXEL = 12
 PERIOD = 0.001
 np = NeoPixel(PIXEL_PIN, NB_PIXEL)
