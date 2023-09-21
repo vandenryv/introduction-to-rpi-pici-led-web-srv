@@ -36,6 +36,7 @@ def from_hsv(h,s,v):
     c = v * s
     x = c * (1- abs(((h/60)%2)-1))
     m = v - c
+    h = h % 360
     if 0 <= h and h < 60:
         (r2,g2,b2) = (c,x,0)
     if 60 <= h and h < 120:
